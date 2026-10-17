@@ -1,0 +1,266 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+}
+
+/* ========================================
+   SOVEREIGN NOIR - GLOBAL STYLE
+======================================== */
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: #f8f9fa;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* Konten utama */
+main {
+    flex: 1 0 auto;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 24px;
+}
+
+/* Judul */
+main h1,
+main h2,
+main h3 {
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+main h1 {
+    margin-bottom: 16px;
+}
+
+main h1,
+main h2 {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+main p {
+    overflow-wrap: break-word;
+}
+
+/* ========================================
+   NAVBAR - BLACK & GOLD
+======================================== */
+
+nav.navbar {
+    position: relative;
+    z-index: 100;
+    background-color: #0b0b0b !important;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(212, 175, 114, 0.25);
+}
+
+nav.navbar .navbar-brand,
+nav.navbar .navbar-brand:hover,
+nav.navbar .navbar-brand:focus {
+    color: #d4af72 !important;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav.navbar .navbar-nav .nav-link,
+nav.navbar .navbar-nav .nav-link:visited {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+nav.navbar .navbar-nav .nav-link:hover,
+nav.navbar .navbar-nav .nav-link:focus,
+nav.navbar .navbar-nav .nav-link:active,
+nav.navbar .navbar-nav .nav-link.active,
+nav.navbar .navbar-nav .nav-link[aria-current="page"] {
+    color: #d4af72 !important;
+    background-color: rgba(212, 175, 114, 0.08);
+}
+
+/* Tombol menu layar kecil */
+nav.navbar .navbar-toggler {
+    border: 1px solid rgba(212, 175, 114, 0.6);
+}
+
+nav.navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(212, 175, 114, 0.25);
+}
+
+/* ========================================
+   KARTU PROJECT DAN PROFILE
+======================================== */
+
+main .card {
+    height: 100%;
+    color: #212529;
+    background-color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+main .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+}
+
+main .card .card-title {
+    color: #212529;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+main .card .card-text {
+    color: #555555;
+}
+
+main .card .card-body {
+    padding: 20px;
+}
+
+main .card img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* ========================================
+   TOMBOL
+======================================== */
+
+main .btn-danger {
+    color: #ffffff;
+    background-color: #e63946;
+    border-color: #e63946;
+    border-radius: 7px;
+    padding: 9px 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+main .btn-danger:hover,
+main .btn-danger:focus {
+    color: #ffffff;
+    background-color: #c92f3b;
+    border-color: #c92f3b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+/* Badge status */
+main .badge {
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* ========================================
+   GAMBAR
+======================================== */
+
+main img {
+    max-width: 100%;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: auto;
+    padding: 16px 12px;
+    color: #343a40;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 991.98px) {
+    nav.navbar .navbar-nav {
+        padding-top: 10px;
+    }
+
+    nav.navbar .navbar-nav .nav-link {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 8px;
+        padding-bottom: 18px;
+    }
+
+    main .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    main .card .card-body {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 14px 10px;
+    }
+}
+
+/* Mengurangi animasi sesuai preferensi perangkat */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
