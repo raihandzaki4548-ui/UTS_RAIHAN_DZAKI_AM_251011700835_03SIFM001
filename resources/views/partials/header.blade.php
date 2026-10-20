@@ -47,21 +47,24 @@
 </nav>
 
 <style>
-    .navbar .nav-link,
-    .navbar .nav-link:visited {
-        color: #f5f5f5 !important;
-        transition: color 0.2s ease;
-    }
+    
+header .navbar.navbar-dark .navbar-nav .nav-link {
+    color: #f5f5f5 !important;
+    transition: color 0.2s ease;
+}
 
-    .navbar .nav-link:hover,
-    .navbar .nav-link:focus,
-    .navbar .nav-link:active,
-    .navbar .nav-link.active {
-        color: #d4af72 !important;
-    }
+header .navbar.navbar-dark .navbar-nav .nav-link:hover,
+header .navbar.navbar-dark .navbar-nav .nav-link:focus,
+header .navbar.navbar-dark .navbar-nav .nav-link:active,
+header .navbar.navbar-dark .navbar-nav .nav-link.active,
+header .navbar.navbar-dark .navbar-nav .nav-link[aria-current="page"] {
+    color: #d4af72 !important;
+    background-color: transparent !important;
+}
 
-    .navbar .nav-link:focus-visible {
-        outline: 1px solid #d4af72;
-        outline-offset: 3px;
-    }
+header .navbar.navbar-dark .navbar-nav .nav-link:focus-visible {
+    outline: 1px solid #d4af72;
+    outline-offset: 3px;
+}
+
 </style>

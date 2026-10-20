@@ -25,11 +25,13 @@
             kenyamanan, performa, dan pengalaman berkendara eksklusif.
         </p>
 
-        <a href="{{ url('/project') }}"
-           class="btn px-4 py-3 rounded-0"
-           style="background: #c5a46d; color: #111; font-weight: bold; letter-spacing: 1px;">
-            EXPLORE OUR CARS &nbsp; →
+        
+        <a href="{{ route('cars.index') }}"
+            class="btn px-4 py-3 rounded-0"
+            style="background: #c5a46d; color: #111; font-weight: bold; letter-spacing: 1px;">
+                EXPLORE OUR CARS &nbsp;›
         </a>
+
     </div>
 
 
